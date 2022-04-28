@@ -1,0 +1,37 @@
+{
+    "menu": [{
+            "id": 0,
+            "title": "My musics",
+            "href": "/my-musics",
+            "icon": "fas fa-music"
+        },
+        {
+            "id": 1,
+            "title": "Best musics",
+            "icon": "fas fa-heart",
+            "href": "/best-musics"
+        },
+        {
+            "id": 2,
+            "title": "Now playing",
+            "icon": "fas fa-compact-disc",
+            "href": "/now-playing"
+        }
+    ],
+    "childs": [{
+        "id": 0,
+        "toParrent": 0,
+        "title": "Songs",
+        "href": "/my-musics/songs"
+    }, {
+        "id": 1,
+        "toParrent": 0,
+        "title": "Artists",
+        "href": "/my-musics/artists"
+    }, {
+        "id": 2,
+        "toParrent": 0,
+        "title": "Albums",
+        "href": "/my-musics/albums"
+    }]
+}

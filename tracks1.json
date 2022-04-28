@@ -1,0 +1,227 @@
+{
+    "tracks": [{
+        "id": 0,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_ToBezarBoroMano.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_ToBezarBoroMano.jpg",
+        "artist": "Amir Tataloo",
+        "title": "to bezar bro mano",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "4:31"
+    }, {
+        "id": 1,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_ManYadetNaram.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_ManYadetNaram.jpg",
+        "artist": "Amir Tataloo",
+        "title": "man yadet naram",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "4:43"
+
+        
+    }, {
+        "id": 2,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_HeyfDididRaft.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_HeyfDididRaft.jpg",
+        "artist": "Amir Tataloo",
+        "title": "heyf didid raft",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "5:27"
+    }, {
+        "id": 3,
+        "trackSrc": "../../assets/audio/Amir Tataloo_Angel_ToKeBekhayMitooni.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/Amir Tataloo_Angel_ToKeBekhayMitooni.jpg",
+        "artist": "Amir Tataloo",
+        "title": "to ke bekhay mitooni",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "5:24"
+    }, {
+        "id": 4,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_ManoBebakhsh.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_ManoBebakhsh.jpg",
+        "artist": "Amir Tataloo",
+        "title": "mano bebakhsh",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "5:49"
+    }, {
+        "id": 5,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_DobareLashNewVersion.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_DobareLashNewVersion.jpg",
+        "artist": "Amir Tataloo",
+        "title": "dobare lash new version",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "8:45"
+    }, {
+        "id": 6,
+        "trackSrc": "../../../../assets/audio/AmirTataloo_Angel_Didi.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_Didi.jpg",
+        "artist": "Amir Tataloo",
+        "title": "didi",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "5:12"
+    }, {
+        "id": 7,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_FarghDaramAzDamBaIna2.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_FarghDaramAzDamBaIna2.jpg",
+        "artist": "Amir Tataloo",
+        "title": "fargh daram az dam baIna",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "5:50"
+    }, {
+        "id": 8,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_Gedaei.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_Gedaei.jpg",
+        "artist": "Amir Tataloo",
+        "title": "gedaei",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "7:38"
+    }, {
+        "id": 9,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_NagooNa.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_NagooNa.jpg",
+        "artist": "Amir Tataloo",
+        "title": "nagoo na",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "5:30"
+    }, {
+        "id": 10,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_NesfeShab.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_NesfeShab.jpg",
+        "artist": "Amir Tataloo",
+        "title": "nesfe shab",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "5:52"
+    }, {
+        "id": 11,
+        "trackSrc": "../../assets/audio/AmirTataloo_Angel_Dorost.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_Dorost.jpg",
+        "artist": "Amir Tataloo",
+        "title": "dorost",
+        "album": "angel",
+        "genre": "Hip-Hop",
+        "year": "2021",
+        "time": "7:35"
+    }, {
+        "id": 12,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_Ajab2.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_Ajab2.jpg",
+        "artist": "Amir Tataloo",
+        "title": "Ajab 2",
+        "album": "sheytan",
+        "genre": "Hip-Hop",
+        "year": "2020",
+        "time": "2:40"
+    }, {
+        "id": 13,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_YeSaramBeMaBezan.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_YeSaramBeMaBezan.jpg",
+        "artist": "Amir Tataloo",
+        "title": "Ye Saram Be Ma Bezan",
+        "album": "sheytan",
+        "genre": "Hip-Hop",
+        "year": "2020",
+        "time": "2:40"
+    }, {
+        "id": 14,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_BaTo2.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_BaTo2.jpg",
+        "artist": "Amir Tataloo",
+        "title": "Ba To 2",
+        "album": "sheytan",
+        "genre": "Hip-Hop/pop",
+        "year": "2020",
+        "time": "2:40"
+    }, {
+        "id": 15,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_BezarTooHaleKhodamBasham2.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_BezarTooHaleKhodamBasham2.jpg",
+        "artist": "Amir Tataloo",
+        "title": "Bezar Too Hale Khodam Basham 2",
+        "album": "sheytan",
+        "genre": "Hip-Hop",
+        "year": "2020",
+        "time": "2:40"
+    }, {
+        "id": 16,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_Allah.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_Allah.jpg",
+        "artist": "Amir Tataloo",
+        "title": "Allah",
+        "album": "sheytan",
+        "genre": "Hip-Hop",
+        "year": "2020",
+        "time": "2:40"
+    }, {
+        "id": 17,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_DeleManHavatoKarde2.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_DeleManHavatoKarde2.jpg",
+        "artist": "Amir Tataloo",
+        "title": "Dele Man Havato Karde 2",
+        "album": "sheytan",
+        "genre": "Hip-Hop",
+        "year": "2020",
+        "time": "2:40"
+    }, {
+        "id": 18,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_Mikham.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_Mikham.jpg",
+        "artist": "Amir Tataloo",
+        "title": "Mikham",
+        "album": "sheytan",
+        "genre": "Hip-Hop",
+        "year": "2020",
+        "time": "2:40"
+    }, {
+        "id": 19,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_ManBahatGhahram.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_ManBahatGhahram.jpg",
+        "artist": "Amir Tataloo",
+        "title": "Man Bahat Ghahram",
+        "album": "sheytan",
+        "genre": "Hip-Hop",
+        "year": "2020",
+        "time": "2:40"
+    }
+    , {
+        "id": 19,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_ManBahatGhahram.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_ManBahatGhahram.jpg",
+        "artist": "eminem",
+        "title": "Man Bahat Ghahram",
+        "album": "barzakh",
+        "genre": "Hip-Hop",
+        "year": "2020",
+        "time": "2:40"
+    }, {
+        "id": 20,
+        "trackSrc": "../../assets/audio/AmirTataloo_Sheytan_ManBahatGhahram.mp3 ",
+        "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Sheytan_ManBahatGhahram.jpg",
+        "artist": "eminem",
+        "title": "Man Bahat Ghahram",
+        "album": "barzakh",
+        "genre": "Hip-Hop",
+        "year": "2020",
+        "time": "2:40"
+    }
+]
+}

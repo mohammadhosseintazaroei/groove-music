@@ -1,0 +1,89 @@
+.css-1kz0hui-MuiSlider-valueLabel {
+    font-size: 2vh !important;
+    top: -1.2vh !important;
+    background: #efefef;
+    color: #3f3f3f;
+}
+
+.css-1kz0hui-MuiSlider-valueLabel {
+    /* font-size: 1vw !important; */
+    padding: 0.6vh 2vh !important;
+}
+
+.css-1kz0hui-MuiSlider-valueLabel:before {
+    width: 1vh !important;
+    height: 1vh !important;
+}
+
+.css-187mznn-MuiSlider-root {
+    height: .3vh !important;
+    border-radius: 0 !important;
+    color: #fff !important;
+}
+
+.css-eg0mwd-MuiSlider-thumb {
+    height: 2.5vh !important;
+    width: 2.5vh !important;
+    border: 0.4vh solid rgb(255, 255, 255);
+    /* background: url(../assets/img/tracks-thumbnail/AmirTataloo_Angel_HeyfDididRaft.jpg); */
+    backdrop-filter: saturate(100%) blur(500px);
+    background: rgba(255, 255, 255) !important;
+}
+
+.css-eg0mwd-MuiSlider-thumb:hover {
+    box-shadow: 0px 0px 0px 1.9vh rgb(255 255 255/ 16%) !important;
+}
+
+.css-eg0mwd-MuiSlider-thumb.Mui-focusVisible {
+    box-shadow: 0px 0px 0px 1.9vh rgb(255 255 255/ 16%) !important;
+}
+
+.css-eg0mwd-MuiSlider-thumb.Mui-active {
+    box-shadow: 0px 0px 0px 2.9vh rgb(255 255 255 / 16%) !important;
+}
+
+.css-1gv0vcd-MuiSlider-track {
+    height: .2vh !important;
+    border: none !important;
+}
+.css-1ujnqem-MuiTabs-root {
+    min-height: 8vh !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root {
+    color: #5f5f5f !important;
+    min-width: 5vw !important;
+    min-height: 2vh !important;
+    font-size: 2vh !important;
+    padding: 3.7vh 5vh !important;
+}
+
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #000 !important;
+}
+
+.css-1aquho2-MuiTabs-indicator {
+    height: .4vh !important;
+    background-color:#5b5b59 !important;
+}
+
+.css-heg063-MuiTabs-flexContainer {
+    border-bottom: .3vh solid #efefef;
+}
+
+.css-14pt78w-MuiSlider-rail {
+    background-color: #ffffff !important;
+}
+
+.contolleItems>button:nth-child(3).border-icon{
+    border:0.35vh solid rgb(150 143 143 / 50%);
+}
+
+.css-mf1cb5-MuiButtonBase-root-MuiIconButton-root {
+    padding: .7vw !important;
+}
+.css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+    position: absolute !important;
+    right: 50% !important;
+    transform: translateX(50%) !important;
+    color: #fff !important;
+}

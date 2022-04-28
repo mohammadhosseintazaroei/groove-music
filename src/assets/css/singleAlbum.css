@@ -1,0 +1,95 @@
+.music-containerC {
+    display: flex;
+    /* width: 100%; */
+    align-items: flex-start;
+    /* background: url(naggoNa.jpg); */
+    background: rgb(54 52 52 / 50%);
+    backdrop-filter: blur(3vw);
+}
+.background-img {
+    height: 10vh;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+}
+.background__filter {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(40px);
+    background: #54363691;
+    backdrop-filter: blur(.7vw);
+    z-index: 2;
+}
+/* .background__filter.artist-thumbnail {
+    background: #181818;
+} */
+.background-img img {
+    height: 100%;
+    width: 100%;
+}
+.music-body-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 35vh;
+    z-index: 4;
+    /* padding: 2vw; */
+}
+.music-body-container .controll-container {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly;
+    width: 40vw; */
+    padding: 2vw;
+}
+.music-body-container .controll-container .controll-item { 
+    color: #fff;
+    font-size: 1vw;
+    cursor: pointer;
+    padding: 0.3vw 1vw;
+    border-radius: 1vw;
+    transition: .1s;
+}
+.music-body-container .controll-container .controll-item:hover { 
+background-color: rgb(139 137 137 / 68%);
+} 
+.music-body-container .controll-container .controll-item i {
+    margin-right: 0.5vw;
+}
+.music-headC {
+    width: 30%;
+    height: 100%;
+    margin-right: 0vw;
+    padding-right: 1vw;
+    z-index: 3;
+    padding: 2vw;
+}
+.music-bodyC {
+    z-index: 3;
+    padding: 2vw;
+}
+.music-bodyC div {
+    color:#fff;
+}
+.music-bodyC .album-title {
+    font-size: 2vw;
+}
+.music-bodyC .album-artist {
+    font-size: .8vw;
+}
+.thumbnail {
+    width: 100%;
+    width: 50%;
+    height: auto;
+}
+.thumbnail.artist-thumbnail { 
+    border-radius: 50%;
+}
+.thumbnail.album-thumbnail { 
+    border-radius: 0%;
+}

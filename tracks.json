@@ -1,0 +1,26 @@
+{
+  "tracks": [
+    {
+      "id": 0,
+      "trackSrc": "../../assets/audio/AmirTataloo_Angel_ToBezarBoroMano.mp3 ",
+      "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_ToBezarBoroMano.jpg",
+      "artist": "Amir Tataloo",
+      "title": "to bezar bro mano",
+      "album": "angel",
+      "genre": "Hip-Hop",
+      "year": "2021",
+      "time": "4:31"
+    },
+    {
+      "id": 1,
+      "trackSrc": "../../assets/audio/AmirTataloo_Angel_ManYadetNaram.mp3 ",
+      "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_ManYadetNaram.jpg",
+      "artist": "Amir Tataloo",
+      "title": "man yadet naram",
+      "album": "angel",
+      "genre": "Hip-Hop",
+      "year": "2021",
+      "time": "4:43"
+    }
+  ]
+}

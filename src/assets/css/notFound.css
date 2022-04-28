@@ -1,0 +1,313 @@
+/* 
+body{
+    display: flex;
+} */
+.page-not-found-container-fluid {
+  height: 100vh;
+  width: 100%;
+  background: #333745;
+  display: flex;
+  justify-content: center;
+}
+.page-not-found-container {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+  background: #333745;
+}
+
+.headChar {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  left: 35px;
+  top: 20px;
+  animation: headChange 1s infinite 1.6s ease-in;
+}
+.bodyChar {
+  width: 40px;
+  height: 100px;
+  background-color: white;
+  border-radius: 60px 10px 0 0;
+  animation: bodyChange 1s infinite 1.6s ease-in;
+}
+.firstLeg,
+.secondLeg {
+  width: 35px;
+  height: 10px;
+  background: white;
+  border-radius: 20px 50px 50px 20px;
+  position: relative;
+  top: 55px;
+  left: 20px;
+  animation: walk 2s infinite linear;
+  z-index: 9;
+}
+.secondLeg {
+  top: 25px;
+  animation-delay: 1s;
+}
+.shadowChar {
+  width: 50%;
+  height: 5%;
+  background: #575555;
+  border-radius: 50%;
+  animation: shadowChange 1s infinite 1.6s linear;
+}
+.right-handel,
+.left-handel {
+  width: 55px;
+  height: 49px;
+  position: absolute;
+  left: 157px;
+  top: 46px;
+  text-align: 50px;
+  border-radius: 50%;
+  animation: headChange 1s infinite 1.6s ease-in;
+}
+/* .right-handel,
+.left-handel {
+  width: 50px;
+  height: 42px;
+  width: 6%;
+  height: 11%;
+  position: absolute;
+  top: 48px;
+  left: 160px;
+  left: 50%;
+  top: 22.5%;
+  text-align: 50px;
+  border-radius: 50%;
+  animation: headChange 1s infinite 1.6s ease-in;
+} */
+
+.right-handel {
+  border-top: 9px solid #000000;
+}
+.left-handel {
+  border-left: 8px solid #000000;
+  z-index: 9;
+}
+.headphone-icon {
+  position: absolute;
+  font-size: 10px;
+  top: 5px;
+  left: 4px;
+}
+.beat {
+  width: 20px;
+  height: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #6c748f;
+  position: absolute;
+}
+.beat-right {
+  right: 0;
+  top: 0;
+  right: -2%;
+  top: 4%;
+}
+.beat-left {
+  left: 0;
+  bottom: 0;
+  left: -5px;
+  bottom: -5px;
+  left: -5%;
+  bottom: -5%;
+  left: 4%;
+  bottom: -12%;
+}
+.headphone-icon {
+  font-size: 9px;
+  position: absolute;
+  left: 25%;
+  top: 25%;
+}
+.title-404 {
+  width: auto;
+height: auto;
+padding: 20px;
+position: absolute;
+top: -2px;
+left: 0px;
+color: #efefef;
+border: 2px solid #efefef;
+border-top: none;
+border-left: none;
+  border-radius: 0 0 20px 0;
+  /* animation: ss 1s infinite 1.6s  cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .page-not-found-container {
+    width: 150px;
+    height: 150px;
+  }
+  .headChar {
+    width: 25px;
+    height: 25px;
+    left: 19px;
+    top: 5px;
+  }
+  .bodyChar {
+    width: 20px;
+    height: 50px;
+  }
+  .firstLeg,
+  .secondLeg {
+    width: 23px;
+    height: 7px;
+  }
+  .firstLeg {
+    top: 25px;
+  }
+  .secondLeg {
+    top: 16px;
+  }
+  .right-handel,
+  .left-handel {
+    width: 27px;
+    height: 23px;
+    left: 80px;
+    top: 18px;
+  }
+  .right-handel {
+    border-top: 6px solid #000000;
+  }
+  .left-handel {
+    border-left: 5px solid #000000;
+    z-index: 9;
+  }
+  .beat {
+    width: 10px;
+    height: 10px;
+  }
+  .headphone-icon {
+    font-size: 5px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .page-not-found-container {
+    width: 550px;
+    height: 550px;
+  }
+  .headChar {
+    width: 100px;
+    height: 100px;
+    left: 79px;
+    top: 20px;
+  }
+  .bodyChar {
+    width: 80px;
+    height: 200px;
+  }
+  .firstLeg,
+  .secondLeg {
+    width: 40px;
+    height: 15px;
+  }
+  .firstLeg {
+    top: 45px;
+  }
+  .secondLeg {
+    top: 16px;
+  }
+  .shadowChar {
+    width: 200px;
+  }
+
+  /* .shadowChar {
+    height: 40px;
+  } */
+  .right-handel,
+  .left-handel {
+    width: 99px;
+    height: 85px;
+    left: 299px;
+    top: 68px;
+  }
+  .right-handel {
+    border-top: 17px solid #000000;
+  }
+
+  .left-handel {
+    border-left: 17px solid #000000;
+  }
+  .beat {
+    width: 35px;
+    height: 35px;
+  }
+  .headphone-icon {
+    font-size: 16px;
+  }
+  .beat-right {
+    right: -5%;
+    top: -5%;
+  }
+}
+
+@keyframes headChange {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(20%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes bodyChange {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes walk {
+  0% {
+    transform: translateX(0px) rotate(0deg);
+  }
+  20% {
+    transform: translateX(-20px) rotate(0deg);
+  }
+  40% {
+    transform: translate(-40px, 0px) rotate(0deg);
+  }
+  60% {
+    transform: translate(-30px, -10px) rotate(35deg);
+  }
+  90% {
+    transform: translate(10px, -7px) rotate(-35deg);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes shadowChange {
+  0% {
+    width: 50%;
+  }
+  50% {
+    width: 60%;
+  }
+  100% {
+    width: 50%;
+  }
+}

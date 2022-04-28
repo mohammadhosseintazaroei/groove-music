@@ -1,0 +1,26 @@
+{
+    "artists": [{
+            "id": 0,
+            "artistName": "Amir Tataloo",
+            "genre": "Rock/Hip-Hop/Rap",
+            "profile": "../assets/img/artist-profile/AmirTataloo.jpg"
+        },
+        {
+            "id": 1,
+            "artistName": "Sohrab Mj",
+            "genre": "Hip-Hop/Rap",
+            "profile": "../assets/img/artist-profile/SohrabMj.jpg"
+        },
+        {
+            "id": 2,
+            "artistName": "Ahadmehr Aghili",
+            "genre": "Rock/Pop",
+            "profile": "../assets/img/artist-profile/ShadmehrAghili.jpg"
+        },       {
+            "id": 3,
+            "artistName": "Eminem",
+            "genre": "Hip-Hop/Rap",
+            "profile": "../assets/img/artist-profile/Eminem.jpg"
+        }
+    ]
+}
