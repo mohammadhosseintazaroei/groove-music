@@ -33,10 +33,10 @@ export default function Musics(props) {
       return await (await Items).json();
     }
     function thenItems(url, setItemsState) {
-      getItems(url).then((items) => setItemsState(items));
+      getItems(url).then((items) => { setItemsState(items.result) });
     }
-    thenItems("http://localhost:3002/tracks", setTracks);
-    thenItems("http://localhost:3004/album", setAlbums);
+    thenItems("http://localhost:4000/song", setTracks);
+    thenItems("http://localhost:4000/album", setAlbums);
     thenItems("http://localhost:3005/artists", setArtists);
     // document.title = await `${tracks[props.trackIndex].title} now playing`
   }, []);
@@ -44,7 +44,7 @@ export default function Musics(props) {
   async function getAlbumsTracks(index) {
     const albumTitle = albums ? albums[index].title : null;
     const albumsTracks = await fetch(
-      `http://localhost:3002/tracks?album=${albumTitle}`
+      `http://localhost:3002/tracks`
     );
     return await (await albumsTracks).json();
   }
@@ -62,7 +62,7 @@ export default function Musics(props) {
     await getAlbumsTracks(index).then((albumsTrack) =>
       setAlbumsTracks(albumsTrack)
     );
-    
+
   }
 
   async function handelChangeArtistIndex(index) {
@@ -84,7 +84,7 @@ export default function Musics(props) {
     await props.setTrackIndex(index);
     await setTracksItem(tracks, index);
     await props.setPrevNextTrack(tracks);
-    await props.PlayHandel(props.prevNextTrack,index);
+    await props.PlayHandel(props.prevNextTrack, index);
   }
   // async function handelChangeAlbumsTrackIndex(index) {
   //     await setAlbumsTrackIndex(index)
@@ -122,230 +122,230 @@ export default function Musics(props) {
   //   : null;
   const tracksCardCC = tracks
     ? tracks.map((tracks, index) => (
-        <MusicCard
-          key={tracks.id}
-          thumbnail={tracks.thumbnail}
-          title={tracks.title}
-          artist={tracks.artist}
-          album={tracks.album}
-          genre={tracks.genre}
-          year={tracks.year}
-          time={tracks.time}
-          index={index}
-          handelClick={ChangeTrackIndex}
-        />
-      ))
+      <MusicCard
+        key={tracks.id}
+        thumbnail={tracks.thumbnail}
+        title={tracks.title}
+        artist={tracks.artist}
+        album={tracks.album}
+        genre={tracks.genre}
+        year={tracks.year}
+        time={tracks.time}
+        index={index}
+        handelClick={ChangeTrackIndex}
+      />
+    ))
     : null;
 
   const artistCardCC =
     artists && artists.length > 0
       ? artists.map((artist, index) => (
-          <ArtistCard
-            key={artist.id}
-            profile={artist.profile}
-            artistName={artist.artistName}
-            artistHref={`/artists/${artist.artistName}`}
-            index={index}
-            handelClick={handelChangeArtistIndex}
-          />
-        ))
+        <ArtistCard
+          key={artist.id}
+          profile={artist.profile}
+          artistName={artist.artistName}
+          artistHref={`/artists/${artist.artistName}`}
+          index={index}
+          handelClick={handelChangeArtistIndex}
+        />
+      ))
       : null;
 
   const artistsRouter = artists
     ? artists.map((artist, index) => (
-        <Route path={`/artists/${artist.artistName}`}>
-          <SingleArtistPage
-            customClass="artist-thumbnail"
-            albumThumbnail={artist.profile}
-            albumTitle={artist.artistName}
-            albumArtist={artist.genre}
-            controllSongsArtistState={controllSongsArtistState}
-          />
-          <div className="row musics-card-row single-page-row">
-            <div className="d-flex justify-content-end">
-              <div onClick={(e) => controllSongsArtistState()}>
-                {showSongsArtist ? (
-                  <span>Albums view</span>
-                ) : (
-                  <span>Songs view</span>
-                )}
-              </div>
+      <Route path={`/artists/${artist.artistName}`}>
+        <SingleArtistPage
+          customClass="artist-thumbnail"
+          albumThumbnail={artist.profile}
+          albumTitle={artist.artistName}
+          albumArtist={artist.genre}
+          controllSongsArtistState={controllSongsArtistState}
+        />
+        <div className="row musics-card-row single-page-row">
+          <div className="d-flex justify-content-end">
+            <div onClick={(e) => controllSongsArtistState()}>
+              {showSongsArtist ? (
+                <span>Albums view</span>
+              ) : (
+                <span>Songs view</span>
+              )}
             </div>
-            {!showSongsArtist && albums
-              ? albums
-                  .filter((val) => {
-                    if (
-                      val.artist
-                        .toLowerCase()
-                        .includes(artist.artistName.toLowerCase())
-                    ) {
-                      return val;
-                    } else {
-                      return null;
-                    }
-                  })
-                  .map((val, index) => {
-                    return (
-                      <AlbumCard
-                        key={val.id}
-                        thumbnail={val.thumbnail}
-                        artist={val.artist}
-                        title={val.title}
-                        albumHref={`/albums/${val.title}`}
-                        index={index}
-                        handelClick={handelChangeAlbumIndex}
-                      />
-                    );
-                  })
-              : null}
-            {showSongsArtist && tracks
-              ? tracks
-                  .filter((val) => {
-                    if (
-                      val.artist
-                        .toLowerCase()
-                        .includes(artist.artistName.toLowerCase())
-                    ) {
-                      return val;
-                    } else {
-                      return null;
-                    }
-                  })
-                  .map((val, index) => {
-                    async function getArtistsTracks(index) {
-                      const artistTitle = artist.artistName;
-                      const albumsTracks = await fetch(
-                        `http://localhost:3002/tracks?artist=${artistTitle.toLowerCase()}`
-                      );
-                      return await (await albumsTracks).json();
-                    }
-                    async function handelChangeAlbumTracksIndex(index) {
-                      // await setAlbumIndex(index);
-                      await getArtistsTracks(index).then((albumsTrack) =>
-                        props.setPrevNextTrack(albumsTrack)
-                      );
-                      await console.log(props.prevNextTrack);
-                    }
-                    return (
-                      <AlbumTracksCard
-                        key={val.id}
-                        thumbnail={`../${val.thumbnail}`}
-                        artist={val.artist}
-                        title={val.title}
-                        index={index}
-                        year={val.year}
-                        time={val.time}
-                        handelClick={async (index) => {
-                          await handelChangeAlbumTracksIndex();
-                          await props.setTrackIndex(index);
-                          // await setTracksItem(val, index)
-                          props.track.src = await val.trackSrc;
-                          props.thumbnail.current.src = await val.thumbnail;
-                          props.littleThumbnail.current.src =
-                            await val.thumbnail;
-                          props.trackArtist.current.textContent =
-                            await val.artist;
-                          props.trackTitle.current.textContent =
-                            await val.title;
-                          props.trackAlbum.current.textContent =
-                            await val.album;
-
-                          await props.PlayHandel(props.prevNextTrack, index);
-                        }}
-                      />
-                    );
-                  })
-              : null}
           </div>
-        </Route>
-      ))
+          {!showSongsArtist && albums
+            ? albums
+              .filter((val) => {
+                if (
+                  val.artist
+                    .toLowerCase()
+                    .includes(artist.artistName.toLowerCase())
+                ) {
+                  return val;
+                } else {
+                  return null;
+                }
+              })
+              .map((val, index) => {
+                return (
+                  <AlbumCard
+                    key={val.id}
+                    thumbnail={val.thumbnail}
+                    artist={val.artist}
+                    title={val.title}
+                    albumHref={`/albums/${val.title}`}
+                    index={index}
+                    handelClick={handelChangeAlbumIndex}
+                  />
+                );
+              })
+            : null}
+          {showSongsArtist && tracks
+            ? tracks
+              .filter((val) => {
+                if (
+                  val.artist
+                    .toLowerCase()
+                    .includes(artist.artistName.toLowerCase())
+                ) {
+                  return val;
+                } else {
+                  return null;
+                }
+              })
+              .map((val, index) => {
+                async function getArtistsTracks(index) {
+                  const artistTitle = artist.artistName;
+                  const albumsTracks = await fetch(
+                    `http://localhost:3002/tracks?artist=${artistTitle.toLowerCase()}`
+                  );
+                  return await (await albumsTracks).json();
+                }
+                async function handelChangeAlbumTracksIndex(index) {
+                  // await setAlbumIndex(index);
+                  await getArtistsTracks(index).then((albumsTrack) =>
+                    props.setPrevNextTrack(albumsTrack)
+                  );
+                  await console.log(props.prevNextTrack);
+                }
+                return (
+                  <AlbumTracksCard
+                    key={val.id}
+                    thumbnail={`../${val.thumbnail}`}
+                    artist={val.artist}
+                    title={val.title}
+                    index={index}
+                    year={val.year}
+                    time={val.time}
+                    handelClick={async (index) => {
+                      await handelChangeAlbumTracksIndex();
+                      await props.setTrackIndex(index);
+                      // await setTracksItem(val, index)
+                      props.track.src = await val.trackSrc;
+                      props.thumbnail.current.src = await val.thumbnail;
+                      props.littleThumbnail.current.src =
+                        await val.thumbnail;
+                      props.trackArtist.current.textContent =
+                        await val.artist;
+                      props.trackTitle.current.textContent =
+                        await val.title;
+                      props.trackAlbum.current.textContent =
+                        await val.album;
+
+                      await props.PlayHandel(props.prevNextTrack, index);
+                    }}
+                  />
+                );
+              })
+            : null}
+        </div>
+      </Route>
+    ))
     : null;
 
   const albumsRouter = albums
     ? albums.map((album, index) => (
-        <Route path={`/albums/${album.title}`}>
-          {/* <div>{album.title}</div> */}
-          <SinglePage
-            customClass="album-thumbnail"
-            albumThumbnail={album.thumbnail}
-            albumTitle={album.title}
-            albumArtist={album.artist}
-          />
+      <Route path={`/albums/${album.title}`}>
+        {/* <div>{album.title}</div> */}
+        <SinglePage
+          customClass="album-thumbnail"
+          albumThumbnail={album.thumbnail}
+          albumTitle={album.title}
+          albumArtist={album.artist}
+        />
 
-          <div className="row musics-card-row single-page-row">
-            {tracks
-              ? tracks
-                  .filter((val) => {
-                    if (
-                      val.album
-                        .toLowerCase()
-                        .includes(album.title.toLowerCase())
-                    ) {
-                      return val;
-                    } else {
-                      return null;
-                    }
-                  })
-                  .map((val, index) => {
-                    async function getAlbumsTracks(index) {
-                      const albumTitle = album.title;
-                      const albumsTracks = await fetch(
-                        `http://localhost:3002/tracks?album=${albumTitle.toLowerCase()}`
-                      );
-                      return await (await albumsTracks).json();
-                    }
-                    async function handelChangeAlbumTracksIndex(index) {
-                      // await setAlbumIndex(index);
-                      await getAlbumsTracks(index).then((albumsTrack) =>
-                        props.setPrevNextTrack(albumsTrack)
-                      );
-                      await console.log(props.prevNextTrack);
-                    }
-                    return (
-                      <AlbumTracksCard
-                        key={val.id}
-                        thumbnail={`../${val.thumbnail}`}
-                        artist={val.artist}
-                        title={val.title}
-                        index={index}
-                        year={val.year}
-                        time={val.time}
-                        handelClick={async (index) => {
-                          await handelChangeAlbumTracksIndex();
-                          await props.setTrackIndex(index);
-                          // await setTracksItem(val, index)
-                          props.track.src = await val.trackSrc;
-                          props.thumbnail.current.src = await val.thumbnail;
-                          props.littleThumbnail.current.src =
-                            await val.thumbnail;
-                          props.trackArtist.current.textContent =
-                            await val.artist;
-                          props.trackTitle.current.textContent =
-                            await val.title;
-                          props.trackAlbum.current.textContent =
-                            await val.album;
-                          // await props.setPrevNextTrack(tracks);
-                          // console.log(val.title)
-                          await props.PlayHandel(props.prevNextTrack, index);
-                        }}
-                      />
-                    );
-                  })
-              : //     .forEach(val => {
-                //         mapd.push({
-                //             id: val.id,
-                //             trackSrc: val.trackSrc,
-                //             artist: val.artist,
-                //             title: val.title,
-                //             album: val.album
-                //         })
-                //     })
-                //     : null}
-                // {mapd ? mapd
-                null}
-          </div>
-        </Route>
-      ))
+        <div className="row musics-card-row single-page-row">
+          {tracks
+            ? tracks
+              .filter((val) => {
+                if (
+                  val.album
+                    .toLowerCase()
+                    .includes(album.title.toLowerCase())
+                ) {
+                  return val;
+                } else {
+                  return null;
+                }
+              })
+              .map((val, index) => {
+                async function getAlbumsTracks(index) {
+                  const albumTitle = album.title;
+                  const albumsTracks = await fetch(
+                    `http://localhost:4000/song/${albumTitle.toLowerCase()}`
+                  );
+                  return await (await albumsTracks).json();
+                }
+                async function handelChangeAlbumTracksIndex(index) {
+                  // await setAlbumIndex(index);
+                  await getAlbumsTracks(index).then((albumsTrack) =>{
+                    props.setPrevNextTrack(albumsTrack.songs)
+                });
+                  await console.log(props.prevNextTrack);
+                }
+                return (
+                  <AlbumTracksCard
+                    key={val.id}
+                    thumbnail={`../${val.thumbnail}`}
+                    artist={val.artist}
+                    title={val.title}
+                    index={index}
+                    year={val.year}
+                    time={val.time}
+                    handelClick={async (index) => {
+                      await handelChangeAlbumTracksIndex();
+                      await props.setTrackIndex(index);
+                      // await setTracksItem(val, index)
+                      props.track.src = await val.trackSrc;
+                      props.thumbnail.current.src = await val.thumbnail;
+                      props.littleThumbnail.current.src =
+                        await val.thumbnail;
+                      props.trackArtist.current.textContent =
+                        await val.artist;
+                      props.trackTitle.current.textContent =
+                        await val.title;
+                      props.trackAlbum.current.textContent =
+                        await val.album;
+                      // await props.setPrevNextTrack(tracks);
+                      // console.log(val.title)
+                      await props.PlayHandel(props.prevNextTrack, index);
+                    }}
+                  />
+                );
+              })
+            : //     .forEach(val => {
+            //         mapd.push({
+            //             id: val.id,
+            //             trackSrc: val.trackSrc,
+            //             artist: val.artist,
+            //             title: val.title,
+            //             album: val.album
+            //         })
+            //     })
+            //     : null}
+            // {mapd ? mapd
+            null}
+        </div>
+      </Route>
+    ))
     : null;
   async function handelAll(index) {
     const albumTitle = albums[index].title;
@@ -363,23 +363,23 @@ export default function Musics(props) {
       props.setPrevNextTrack(albumsTrack)
     );
     await console.log(props.prevNextTrack);
-    await props.PlayHandel(props.prevNextTrack , 0);
+    await props.PlayHandel(props.prevNextTrack, 0);
     console.log(index);
   }
   const albumsCards = albums
     ? albums.map((albums, index) => (
-        <AlbumCard
-          key={albums.id}
-          thumbnail={albums.thumbnail}
-          artist={albums.artist}
-          title={albums.title}
-          albumHref={`/albums/${albums.title}`}
-          index={index}
-          handelClick={handelChangeAlbumIndex}
-          handelAll={ddd}
-          sidebarshow={sidebarshow}
-        />
-      ))
+      <AlbumCard
+        key={albums.id}
+        thumbnail={albums.thumbnail}
+        artist={albums.artist}
+        title={albums.title}
+        albumHref={`/albums/${albums.title}`}
+        index={index}
+        handelClick={handelChangeAlbumIndex}
+        handelAll={ddd}
+        sidebarshow={sidebarshow}
+      />
+    ))
     : null;
   return (
     <>
@@ -397,11 +397,10 @@ export default function Musics(props) {
             />
 
             <div
-              className={`musics-container ${
-                sidebarshow
-                  ? "musics-container-little-width"
-                  : "musics-container-medum-width"
-              }`}
+              className={`musics-container ${sidebarshow
+                ? "musics-container-little-width"
+                : "musics-container-medum-width"
+                }`}
               id="size2"
             >
               <Route path="/artists">{artistsRouter}</Route>
@@ -431,9 +430,8 @@ export default function Musics(props) {
               {/* <NavTabs /> */}
               <div className="row musics-card-row  position-relative">
                 <div
-                  className={`${
-                    props.sidebarshow ? "col-12 col-lg-10" : "col-12"
-                  } `}
+                  className={`${props.sidebarshow ? "col-12 col-lg-10" : "col-12"
+                    } `}
                 >
                   {tracks <= 0 || albums <= 0 ? (
                     <Loader
@@ -475,35 +473,6 @@ export default function Musics(props) {
                       <div className="row single-page-row">
                         {albums
                           ? albums
-                              .filter((val) => {
-                                if (searchTerm === "") {
-                                  return val;
-                                } else if (
-                                  val.title
-                                    .toLowerCase()
-                                    .includes(searchTerm.toLowerCase())
-                                ) {
-                                  return val;
-                                }
-                              })
-                              .map((val, index) => {
-                                return (
-                                  <AlbumCard
-                                    key={val.id}
-                                    thumbnail={val.thumbnail}
-                                    artist={val.artist}
-                                    title={val.title}
-                                    albumHref={`/albums/${val.title}`}
-                                    index={index}
-                                    handelClick={handelChangeAlbumIndex}
-                                  />
-                                );
-                              })
-                          : null}
-                      </div>
-                      <h2>songs</h2>
-                      {tracks
-                        ? tracks
                             .filter((val) => {
                               if (searchTerm === "") {
                                 return val;
@@ -514,20 +483,49 @@ export default function Musics(props) {
                               ) {
                                 return val;
                               }
-                              return val;
                             })
-                            .map((val, key, index) => {
+                            .map((val, index) => {
                               return (
-                                <MusicCard
+                                <AlbumCard
                                   key={val.id}
-                                  src={val.thumbnail}
+                                  thumbnail={val.thumbnail}
                                   artist={val.artist}
                                   title={val.title}
+                                  albumHref={`/albums/${val.title}`}
                                   index={index}
-                                  handelClick={ChangeTrackIndex}
+                                  handelClick={handelChangeAlbumIndex}
                                 />
                               );
                             })
+                          : null}
+                      </div>
+                      <h2>songs</h2>
+                      {tracks
+                        ? tracks
+                          .filter((val) => {
+                            if (searchTerm === "") {
+                              return val;
+                            } else if (
+                              val.title
+                                .toLowerCase()
+                                .includes(searchTerm.toLowerCase())
+                            ) {
+                              return val;
+                            }
+                            return val;
+                          })
+                          .map((val, key, index) => {
+                            return (
+                              <MusicCard
+                                key={val.id}
+                                src={val.thumbnail}
+                                artist={val.artist}
+                                title={val.title}
+                                index={index}
+                                handelClick={ChangeTrackIndex}
+                              />
+                            );
+                          })
                         : null}
                     </Route>
 

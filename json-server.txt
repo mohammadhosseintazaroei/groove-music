@@ -1,0 +1,14 @@
+
+
+json-server tracks.json
+
+
+json-server --watch album.json --port 3004
+json-server --watch artist.json --port 3005
+json-server --watch menu.json --port 3006
+
+npm start
+
+
+
+33.19

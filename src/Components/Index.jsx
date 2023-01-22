@@ -44,7 +44,7 @@ export default function Index(props) {
 
   useEffect(() => {
     // track.current.volume = 0.2;
-    getTracks().then((track) => setPrevNextTrack(track));
+    getTracks().then((track) => setPrevNextTrack(track.result));
 
     window.addEventListener("keydown", (event) => {
       switch (event.which) {
@@ -63,7 +63,7 @@ export default function Index(props) {
   }, []);
 
   async function getTracks() {
-    const tracksA = await fetch(`http://localhost:3002/tracks`);
+    const tracksA = await fetch(`http://localhost:4000/song`);
     return await (await tracksA).json();
   }
   const setPlayingStateStatus = (statusP) => {
@@ -79,11 +79,11 @@ export default function Index(props) {
     trackAlbum.current.textContent = tracks[index].album;
   };
 
-  const PlayHandel = async (prevNextTrack , trackIndex) => {
+  const PlayHandel = async (prevNextTrack, trackIndex) => {
     setTracksItem(prevNextTrack, trackIndex)
-   await setPlayingStateStatus(false);
-  await  track.current.play();
-   await track.current.src ? setShowPlayer(true) : setShowPlayer(false);
+    await setPlayingStateStatus(false);
+    await track.current.play();
+    await track.current.src ? setShowPlayer(true) : setShowPlayer(false);
   };
   function PlayPauseHandel() {
     if (playing || track.current.play() === true) {
@@ -175,7 +175,6 @@ export default function Index(props) {
   const changeProgressBar = () => {
     track.current.currentTime = currentBg.current.value;
     track.current.currentTime = progressBar.current.value;
-    console.log(progressBar.current, currentBg.current.value);
   };
 
   const handelFullWidth = async (status) => {
@@ -215,8 +214,8 @@ export default function Index(props) {
           fullWidth
             ? { height: "100vh", padding: "3vh 1vw" }
             : { height: "15vh", padding: "0 0" } && showPlayer
-            ? { display: "inline-block" }
-            : { display: "none" }
+              ? { display: "inline-block" }
+              : { display: "none" }
         }
         id="playerContainer"
         ref={playerContainer}
@@ -247,9 +246,9 @@ export default function Index(props) {
             (fullWidth
               ? { alignItems: "flex-end" }
               : { alignItems: "flex-start" },
-            nowPlayingList
-              ? { position: "absolute", transform: 'translateY(-70%)', transition: "transform .5s" }
-              : { position: "initial", transition: ".5s" })
+              nowPlayingList
+                ? { position: "absolute", transform: 'translateY(-70%)', transition: "transform .5s" }
+                : { position: "initial", transition: ".5s" })
           }
         >
           <div
@@ -260,15 +259,15 @@ export default function Index(props) {
             style={
               fullWidth
                 ? {
-                    alignItems: "flex-end",
-                    position: "absolute",
-                    transform: "translateY(-20vh)",
-                  }
+                  alignItems: "flex-end",
+                  position: "absolute",
+                  transform: "translateY(-20vh)",
+                }
                 : {
-                    alignItems: "center",
-                    position: "initial",
-                    transform: "translateY(0)",
-                  }
+                  alignItems: "center",
+                  position: "initial",
+                  transform: "translateY(0)",
+                }
             }
           >
             <ThumbnailMusic

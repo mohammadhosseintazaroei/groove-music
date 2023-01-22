@@ -2,22 +2,34 @@
   "tracks": [
     {
       "id": 0,
-      "trackSrc": "../../assets/audio/AmirTataloo_Angel_ToBezarBoroMano.mp3 ",
-      "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_ToBezarBoroMano.jpg",
-      "artist": "Amir Tataloo",
-      "title": "to bezar bro mano",
-      "album": "angel",
+      "trackSrc": "../../assets/audio/MohsenChavoshi1.mp3 ",
+      "thumbnail": "../../assets/img/tracks-thumbnail/3.jpg",
+      "artist": "mohsen chavoshi",
+      "title": "ali",
+      "album": "1",
       "genre": "Hip-Hop",
       "year": "2021",
       "time": "4:31"
     },
     {
       "id": 1,
-      "trackSrc": "../../assets/audio/AmirTataloo_Angel_ManYadetNaram.mp3 ",
-      "thumbnail": "../../assets/img/tracks-thumbnail/AmirTataloo_Angel_ManYadetNaram.jpg",
-      "artist": "Amir Tataloo",
-      "title": "man yadet naram",
-      "album": "angel",
+      "trackSrc": "../../assets/audio/MohsenChavoshi3.mp3 ",
+      "thumbnail": "../../assets/img/tracks-thumbnail/2.jpg",
+      "artist": "mohsen chavoshi",
+      "title": "halalam kon",
+      "album": "1",
+      "genre": "Hip-Hop",
+      "year": "2021",
+      "time": "4:43"
+    }
+    ,
+    {
+      "id": 1,
+      "trackSrc": "../../assets/audio/MohsenChavoshi2.mp3 ",
+      "thumbnail": "../../assets/img/tracks-thumbnail/1.jpg",
+      "artist": "mohsen chavoshi",
+      "title": "Ou",
+      "album": "2",
       "genre": "Hip-Hop",
       "year": "2021",
       "time": "4:43"

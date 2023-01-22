@@ -1,13 +1,13 @@
 {
     "artists": [{
             "id": 0,
-            "artistName": "Amir Tataloo",
+            "artistName": "salar aghili",
             "genre": "Rock/Hip-Hop/Rap",
             "profile": "../assets/img/artist-profile/AmirTataloo.jpg"
         },
         {
             "id": 1,
-            "artistName": "Sohrab Mj",
+            "artistName": "mohsen chavoshi",
             "genre": "Hip-Hop/Rap",
             "profile": "../assets/img/artist-profile/SohrabMj.jpg"
         },

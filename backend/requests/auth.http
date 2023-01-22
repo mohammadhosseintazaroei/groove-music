@@ -1,0 +1,9 @@
+###register request
+POST http://localhost:3000/auth/register
+{
+    "username":"",
+    "email":"",
+    "mobile":"",
+    "password":"",
+    "confirm_password":"",
+}

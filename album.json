@@ -1,32 +1,22 @@
 {
     "album": [{
             "id": 0,
-            "title": "angel",
-            "artist": "Amir Tataloo",
-            "thumbnail": "../assets/img/album-img/angel.jpg"
-        },
-        {
-            "id": 1,
-            "title": "78",
-            "artist": "Amir Tataloo",
-            "thumbnail": "../assets/img/album-img/78.jpg"
-        },
-        {
-            "id": 2,
-            "title": "sheytan",
-            "artist": "Amir Tataloo",
+            "title": "1",
+            "artist": "mohsen chavoshi",
             "thumbnail": "../assets/img/album-img/sheytan.jpg"
         },
         {
-            "id": 3,
-            "title": "jahanam",
-            "artist": "Amir Tataloo",
-            "thumbnail": "../assets/img/album-img/jahanam.jpg"
+            "id": 1,
+            "title": "2",
+            "artist": "mohsen chavoshi",
+            "thumbnail": "../assets/img/album-img/78.jpg"
         },
+
+
         {
             "id": 4,
-            "title": "barzakh",
-            "artist": "Amir Tataloo",
+            "title": "4",
+            "artist": "mohsen chavoshi",
             "thumbnail": "../assets/img/album-img/barzakh.jpg"
         }
     ]

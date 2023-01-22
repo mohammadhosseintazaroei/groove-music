@@ -12,8 +12,8 @@ export default function ProgressBar(props) {
             <div className="hidden">
                 <div >(; hidden</div>
             </div>
-            <input onInput={props.changeProgressBarHandel} ref={props.progressBarRef} type="range" id="progressBar" min="0" max="10" />
-            <input ref={props.currentBgRef} className="currentBg" type="range" min="0" max="10" />
+            <input onInput={props.changeProgressBarHandel} ref={props.progressBarRef} type="range"  id="progressBar" min="0" max="10" />
+            <input  onInput={props.changeProgressBarHandel} ref={props.currentBgRef} style={{opacity: 0 , display : 'none'} } className="currentBg" type="range" min="0" max="10" />
             <div className="hidden">
                 <div>hidden ;)</div>
             </div>
